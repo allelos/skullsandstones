@@ -8,7 +8,7 @@ const seoImageSrc = "/assets/images/skulls_stones-desktop.jpg";
 
 const getMetaTitle = (title) => (title ? `Skulls & Stones | ${title}` : `Skulls & Stones`);
 const getMetaDescription = (str) => `${str.substring(0, 155)}...`;
-const getCanonicalUrl = (url) => `https://www.skulls&stones.gr${url}`;
+const getCanonicalUrl = (url) => `https://www.skullsandstones.gr${url}`;
 
 const Seo = ({ title, description = seoDescription, image = seoImageSrc }) => {
   const { asPath } = useRouter();
