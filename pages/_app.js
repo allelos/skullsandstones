@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
       <Component {...pageProps} />
-      <script async src="https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.js" />
+      <script defer src="https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.js" />
       <div
         hidden
         id="snipcart"
