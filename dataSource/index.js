@@ -1,6 +1,5 @@
 import { createClient } from "contentful";
 
-/* eslint-disable no-undef */
 const space = process.env.NEXT_CONTENTFUL_SPACE_ID;
 const accessToken = process.env.NEXT_CONTENTFUL_ACCESS_TOKEN;
 
