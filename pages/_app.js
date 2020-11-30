@@ -1,7 +1,10 @@
 import React from "react";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import GlobalStyles from "@components/GlobalStyles";
 import "keen-slider/keen-slider.min.css";
+
+const SnipCart = dynamic(() => import("@components/Snipcart"));
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -19,12 +22,7 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
       <Component {...pageProps} />
-      <script defer src="https://cdn.snipcart.com/themes/v3.0.25/default/snipcart.js" />
-      <div
-        hidden
-        id="snipcart"
-        data-api-key="MmM3MzlkMGYtZWVlMy00MTBhLWE4NmEtZGRiZjIxYmZkNDdlNjM3MDgyMTc4ODYwNDM5MzY2"
-      />
+      <SnipCart />
     </>
   );
 };

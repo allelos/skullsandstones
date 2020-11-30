@@ -4,7 +4,6 @@ import Link from "next/link";
 import { getProducts, getProductBySlug, getRelatedProducts } from "@dataSource/index";
 import Box from "@ui-kit/Box";
 import { Title, Subtitle } from "@ui-kit/Typography";
-import Button from "@ui-kit/Buttons";
 import Layout from "@components/Layout";
 import Seo from "@components/Seo";
 import { SimpleLink } from "@components/Links";
@@ -12,6 +11,7 @@ import ProductImages from "@organisms/Product/ProductImages";
 import ProductDescription from "@organisms/Product/ProductDescription";
 import Main from "@organisms/Product/Layout/Main";
 import ProductInformation from "@organisms/Product/Layout/ProductInformation";
+import BuyNow from "@organisms/Product/BuyNow";
 import RelatedProducts from "@organisms/RelatedProducts";
 
 const typeMap = {
@@ -19,7 +19,7 @@ const typeMap = {
   necklace: "Κολιέ",
 };
 
-const Product = ({ name, images, price, description, rawDescription, type, relatedItems }) => {
+const Product = ({ name, images, price, description, slug, rawDescription, type, relatedItems }) => {
   const setTitle = `${typeMap[type]} - ${name}`;
   const seoImage = `https:${images[0].fields.file.url}`;
   return (
@@ -40,16 +40,9 @@ const Product = ({ name, images, price, description, rawDescription, type, relat
           <Box border="bottom" padding={[0, 0, 6]}>
             <ProductDescription column dangerouslySetInnerHTML={{ __html: description }} />
           </Box>
-          <Button
-            className="snipcart-add-item"
-            data-item-name={name}
-            data-item-id={name}
-            data-item-price={price}
-            data-item-url={null}
-            data-item-image={`https:${images[0].fields.file.url}?fit=thumb&f=center&w=96&h=96`}
-          >
+          <BuyNow name={name} price={price} image={`https:${images[0].fields.file.url}`} slug={slug}>
             ΠΡΟΣΘΗΚΗ ΣΤΟ ΚΑΛΑΘΙ
-          </Button>
+          </BuyNow>
         </ProductInformation>
       </Main>
       <RelatedProducts items={relatedItems} />
