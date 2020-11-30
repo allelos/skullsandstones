@@ -1,0 +1,40 @@
+import styled from "styled-components";
+import alignSelf from "../utilities/alignSelf";
+import flex from "../utilities/flex";
+import direction from "../utilities/direction";
+import wrap from "../utilities/wrap";
+import alignItems from "../utilities/alignItems";
+import alignContent from "../utilities/alignContent";
+import justifyContent from "../utilities/justifyContent";
+import gap from "../utilities/gap";
+import padding from "../utilities/padding";
+import margin from "../utilities/margin";
+import width from "../utilities/width";
+import height from "../utilities/height";
+import overflow from "../utilities/overflow";
+import position from "../utilities/position";
+import border from "../utilities/border";
+import backgroundColor from "../utilities/backgroundColor";
+
+const Box = styled("div")`
+  display: flex;
+  ${direction};
+  ${flex};
+  ${alignItems};
+  ${alignContent};
+  ${alignSelf};
+  ${justifyContent};
+  ${wrap};
+  ${gap};
+  ${padding};
+  ${margin};
+  ${width};
+  ${height};
+  ${overflow};
+  ${position};
+  ${backgroundColor};
+  ${border};
+  ${({ radius }) => radius && `border-radius: ${radius}px;`};
+`;
+
+export default Box;
