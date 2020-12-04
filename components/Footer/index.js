@@ -36,8 +36,8 @@ const Footer = () => {
             <Small color="white" strong>
               ΈΧΕΙΣ ΕΡΩΤΗΣΕΙΣ?
             </Small>
-            <Small color="white" as="a" href="mailto:contact@skulls&stones.gr">
-              contact@skulls&stones.gr
+            <Small color="white" as="a" href="mailto:skullsandstonesproject@gmail.com">
+              skullsandstonesproject@gmail.com
             </Small>
           </Box>
           <Box basis="33%" alignItems="center">
