@@ -5,6 +5,7 @@ import GlobalStyles from "@components/GlobalStyles";
 import "keen-slider/keen-slider.min.css";
 
 const SnipCart = dynamic(() => import("@components/Snipcart"));
+const GoogleAnalytics = dynamic(() => import("@components/GoogleAnalytics"));
 
 const App = ({ Component, pageProps }) => {
   return (
@@ -14,6 +15,7 @@ const App = ({ Component, pageProps }) => {
         <link rel="icon" href="/assets/images/favicon.png" />
       </Head>
       <Component {...pageProps} />
+      <GoogleAnalytics />
       <SnipCart />
     </>
   );
