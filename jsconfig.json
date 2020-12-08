@@ -7,7 +7,7 @@
       "@ui-kit/*": ["ui-kit/*"],
       "@organisms/*": ["organisms/*"],
       "@hooks/*": ["hooks/*"],
-      "@utils/": ["utils/*"]
+      "@utils/*": ["utils/*"]
     }
   }
 }
