@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Box from "@ui-kit/Box";
-import Bag from "@ui-kit/Icons/icons/bag";
+import { Bag } from "@ui-kit/Icons/icons";
 import SimpleLink from "@components/Links/Link";
 import NavContainer from "./NavContainer";
 import NavLinks from "./NavLinks";
@@ -22,7 +22,7 @@ const Nav = ({ floating, transparent, dark }) => {
         <NavLogo href="/" dark={dark} />
       </NavLogoContainer>
       <SimpleLink dark={dark} className="snipcart-checkout">
-        <Bag />
+        <Bag color={dark && "#fefefe"} />
       </SimpleLink>
     </NavContainer>
   );
