@@ -40,7 +40,7 @@ const Product = ({ name, images, price, description, slug, rawDescription, type,
           <Box border="bottom" padding={[0, 0, 6]}>
             <ProductDescription column dangerouslySetInnerHTML={{ __html: description }} />
           </Box>
-          <BuyNow name={name} price={price} image={`https:${images[0].fields.file.url}`} slug={slug}>
+          <BuyNow name={name} price={price} image={`https:${images[0].fields.file.url}`} slug={slug} type={type}>
             ΠΡΟΣΘΗΚΗ ΣΤΟ ΚΑΛΑΘΙ
           </BuyNow>
         </ProductInformation>
