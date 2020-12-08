@@ -25,7 +25,7 @@ const RelateProduct = ({ items }) => {
   }
 
   return (
-    <Box column alignItems="center" padding={[15, 0, 15, 0]} gap={11}>
+    <Box column alignItems="center" padding={[15, 0, 15, 0]} gap={11} overflow="hidden">
       <Tertiary textAlign="center">Σχετικά κοσμήματα</Tertiary>
       <Box ref={sliderRef} className="keen-slider">
         {items.map(({ fields: { name, images, slug } }) => (
