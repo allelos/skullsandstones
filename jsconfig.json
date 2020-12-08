@@ -6,7 +6,8 @@
       "@dataSource/*": ["dataSource/*"],
       "@ui-kit/*": ["ui-kit/*"],
       "@organisms/*": ["organisms/*"],
-      "@hooks/*": ["hooks/*"]
+      "@hooks/*": ["hooks/*"],
+      "@utils/": ["utils/*"]
     }
   }
 }
