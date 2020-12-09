@@ -12,6 +12,8 @@ const imageSize = {
   width: 640,
   height: 640,
 };
+const getImageSrc = (images) =>
+  `https:${images[0].fields.file.url}?fit=fill&f=center&h=${imageSize.height}&w=${imageSize.width}`;
 const pageTitle = "Χειροποίητα βραχιόλια & κολιέ | Η συλλογή";
 
 const Products = ({ items }) => {
@@ -24,10 +26,7 @@ const Products = ({ items }) => {
             <a>
               <Box column gap={1}>
                 <Box>
-                  <Image
-                    src={`https:${images[0].fields.file.url}?fit=fill&f=center&h=${imageSize.height}&w=${imageSize.width}`}
-                    {...imageSize}
-                  />
+                  <Image src={getImageSrc(images)} alt={`${name}-image`} {...imageSize} />
                 </Box>
                 <Text>{name}</Text>
                 <Text>{price} &euro;</Text>
