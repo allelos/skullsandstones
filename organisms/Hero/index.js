@@ -2,16 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Box from "@ui-kit/Box";
-import { Title, Tertiary, Text } from "@ui-kit/Typography";
+import { Title, Tertiary } from "@ui-kit/Typography";
 import Button from "@ui-kit/Buttons";
-import HeroImage from "./HeroImage";
 
 const backgroundGradient = `linear-gradient(to right, rgb(0 0 0 / 0%), rgb(34 34 34 / 47%));`;
 
 const Hero = ({ imageSrc, title, subtitle, text, link }) => {
   return (
-    <HeroImage>
-      <Image src={imageSrc} alt="hero-image" layout="fill" priority />
+    <Box height="100vh" position="relative">
+      <Image src={imageSrc} alt="hero-image" layout="fill" priority objectFit="cover" />
       <Box
         position="absolute"
         width="100%"
@@ -45,7 +44,7 @@ const Hero = ({ imageSrc, title, subtitle, text, link }) => {
           </Box>
         </Box>
       </Box>
-    </HeroImage>
+    </Box>
   );
 };
 
