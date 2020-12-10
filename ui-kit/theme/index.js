@@ -30,21 +30,26 @@ export const fonts = {
   small: {
     size: fontSizes[0],
     fontWeight: fontWeights[0],
+    lineHeight: sizes[4]
   },
   text: {
     size: fontSizes[1],
     fontWeight: fontWeights[0],
+    lineHeight: sizes[5]
   },
   tertiary: {
     size: fontSizes[2],
     fontWeight: fontWeights[0],
+    lineHeight: sizes[5]
   },
   subtitle: {
     size: fontSizes[3],
     fontWeight: fontWeights[1],
+    lineHeight: sizes[5]
   },
   title: {
     size: fontSizes[6],
     fontWeight: fontWeights[3],
+    lineHeight: sizes[7]
   },
 };

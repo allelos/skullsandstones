@@ -2,6 +2,7 @@ import styled, { css } from "styled-components";
 import margin from "../utilities/margin";
 import makeFontSize from "../utilities/makeFontSize";
 import makeFontWeight from "../utilities/makeFontWeight";
+import makeLineHeight from '../utilities/makeLineHeight';
 import textAlign from "../utilities/textAlign";
 import textColor from "../utilities/textColor";
 import backgroundColor from "../utilities/backgroundColor";
@@ -15,6 +16,7 @@ const makeTypography = (type) => css`
   display: inline-block;
   ${makeFontSize(type)};
   ${makeFontWeight(type)};
+  ${makeLineHeight(type)};
   ${fontStyle};
   ${textAlign};
   ${textColor};
