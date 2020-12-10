@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Box from "@ui-kit/Box";
 
-const Grid = styled(Box).attrs({ padding: [10, 4, 12, 4], margin: [0, "auto", 0, "auto"] })`
+const Grid = styled(Box)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
