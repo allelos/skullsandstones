@@ -9,6 +9,19 @@ const ProductImageThumbnailBox = styled(Box).attrs({ gap: 3, position: "absolute
   div {
     border: 1px solid #ccc;
   }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    flex-direction: column;
+
+    &> div {
+      box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);
+    }
+    
+    &> *:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
 `;
 
 const ProductImageThumbnail = ({ title, file, index, onSelect }) => {
@@ -19,10 +32,10 @@ const ProductImageThumbnail = ({ title, file, index, onSelect }) => {
   return (
     <Image
       key={title}
-      src={`https:${file.url}?fit=thumb&f=center&w=42&h=42`}
+      src={`https:${file.url}?fit=thumb&f=center&w=40&h=40`}
       alt="product-thumbnail-image"
-      height={42}
-      width={42}
+      height={40}
+      width={40}
       layout="fixed"
       onMouseEnter={handleSelect}
       onClick={handleSelect}
