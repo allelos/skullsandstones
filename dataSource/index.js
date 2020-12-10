@@ -8,6 +8,8 @@ export const getClient = () => createClient({ space, accessToken });
 export const getProducts = () => getClient().getEntries({ content_type: "product" });
 export const getProduct = (byField) => getClient().getEntry({ entry_slug: byField });
 export const getProductBySlug = (slug) => getClient().getEntries({ content_type: "product", "fields.slug": slug });
+export const getCategoryProducts = (category) =>
+  getClient().getEntries({ content_type: "product", "fields.type[match]": category });
 export const getRelatedProducts = (byField, value) =>
   getClient().getEntries({ content_type: "product", [`fields.${byField}`]: value });
 export const getCollection = (collectionName) =>
