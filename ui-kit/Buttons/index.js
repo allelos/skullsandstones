@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import makeFontSize from "../utilities/makeFontSize";
+import textAlign from '../utilities/textAlign'
 import { sizes } from "../theme";
 
 const colorsMap = {
@@ -17,6 +18,7 @@ const Button = styled("button")`
   ${makeBackground};
   ${makeBorder};
   ${getPadding};
+  ${textAlign};
   ${getColor("white")};
 
   letter-spacing: 0.2em;
