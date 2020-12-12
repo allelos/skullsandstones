@@ -6,6 +6,7 @@ import { Text } from "@ui-kit/Typography";
 const subNavLinks = [
   { title: "/ όλα", link: "/products" },
   { title: "/ βραχιόλια", link: "/products/category/bracelets" },
+  { title: "/ βραχιόλια μεταλλικά", link: "/products/category/cuffs" },
   { title: "/ κολιέ", link: "/products/category/necklaces" },
 ];
 

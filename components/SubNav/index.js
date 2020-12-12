@@ -7,12 +7,12 @@ import SubNavLinks from "@components/SubNav/SubNavLinks";
 const SubNav = ({ title = "συλλογή" }) => {
   return (
     <SubNavContainer>
-      <Title textTransform="lowercase" margin={[0, 0, 4, 0]}>
+      <Title textTransform="lowercase">
         \ {title}
       </Title>
-      <Box column gap={4}>
+      <Box column gap={2}>
         <Subtitle strong>ΟΛΕΣ ΟΙ ΚΑΤΗΓΟΡΙΕΣ</Subtitle>
-        <Box column padding={[0, 0, 0, 2]} gap={2}>
+        <Box column padding={[0, 0, 0, 2]} gap={1}>
           <SubNavLinks />
         </Box>
       </Box>

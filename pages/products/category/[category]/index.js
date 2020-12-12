@@ -21,6 +21,7 @@ const Category = ({ title, items }) => {
 const categoriesMap = {
   bracelets: "Βραχιόλια",
   necklaces: "Κολιέ",
+  cuffs: "βραχιόλια μεταλλικά"
 };
 
 export const getStaticPaths = async () => {
