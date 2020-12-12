@@ -40,16 +40,16 @@ export const fonts = {
   tertiary: {
     size: fontSizes[2],
     fontWeight: fontWeights[0],
-    lineHeight: sizes[5]
+    lineHeight: sizes[6]
   },
   subtitle: {
     size: fontSizes[3],
     fontWeight: fontWeights[1],
-    lineHeight: sizes[5]
+    lineHeight: sizes[7]
   },
   title: {
     size: fontSizes[6],
     fontWeight: fontWeights[3],
-    lineHeight: sizes[7]
+    lineHeight: sizes[8]
   },
 };
