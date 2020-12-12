@@ -38,7 +38,7 @@ const Content = styled(Box).attrs({
 
 const AboutUs = ({ content, rawContent }) => {
   return (
-    <Layout floating="fixed" transparent dark>
+    <Layout floating transparent dark>
       <Seo title="About Us" image="/assets/images/about-us-image.jpg" description={rawContent} />
       <Main>
         <Box width={{ max: "1024px" }} position="relative" column>
