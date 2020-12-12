@@ -7,7 +7,7 @@ const getProductImage = (image) => `https:${image.fields.file.url}?fit=fill&w=10
 
 const ProductImage = ({ image, name, slug }) => {
   return (
-    <Link href={`/products/${slug}`}>
+    <Link href={`/products/${slug}`} passHref>
       <Box as="a" flex basis="50%">
         <Image src={getProductImage(image)} width={1080} height={1080} alt={name || "product-image"} />
       </Box>

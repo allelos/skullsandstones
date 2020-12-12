@@ -1,43 +1,18 @@
 import React from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { getProducts } from "@dataSource/index";
 import Box from "@ui-kit/Box";
-import { Text } from "@ui-kit/Typography";
 import Layout from "@components/Layout";
 import SubNav from "@components/SubNav";
 import Seo from "@components/Seo";
-import Grid from "@organisms/Products/Grid";
+import Products from "@organisms/Products";
 
-const imageSize = {
-  width: 640,
-  height: 640,
-};
-const getImageSrc = (images) =>
-  `https:${images[0].fields.file.url}?fit=fill&f=center&h=${imageSize.height}&w=${imageSize.width}`;
-const pageTitle = "Χειροποίητα βραχιόλια & κολιέ | Η συλλογή";
-
-const Products = ({ items }) => {
+const ProductsIndex = ({ items, pageTitle }) => {
   return (
     <Layout>
       <Seo title={pageTitle} />
       <Box column width={{ max: "1080px " }} margin={[0, "auto"]} padding={[10, 4, 12, 4]} gap={12}>
         <SubNav />
-        <Grid>
-          {items.map(({ fields: { name, price, images, slug } }) => (
-            <Link key={name} href={`/products/${slug}`}>
-              <a>
-                <Box column gap={1}>
-                  <Box>
-                    <Image src={getImageSrc(images)} alt={`${name}-image`} {...imageSize} />
-                  </Box>
-                  <Text>{name}</Text>
-                  <Text>{price} &euro;</Text>
-                </Box>
-              </a>
-            </Link>
-          ))}
-        </Grid>
+        <Products items={items} />
       </Box>
     </Layout>
   );
@@ -48,8 +23,9 @@ export const getStaticProps = async () => {
   return {
     props: {
       items: entries.items,
+      pageTitle: "Χειροποίητα βραχιόλια & κολιέ | Η συλλογή",
     },
   };
 };
 
-export default Products;
+export default ProductsIndex;

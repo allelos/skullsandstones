@@ -30,13 +30,11 @@ const RelateProduct = ({ items }) => {
       <Box ref={sliderRef} className="keen-slider">
         {items.map(({ fields: { name, images, slug } }) => (
           <Box key={name} justifyContent="center" className="keen-slider__slide">
-            <Link href={`/products/${slug}`}>
-              <a>
-                <Box column gap={10}>
-                  <Image src={getImageSrc(images[0])} {...imageSize} />
-                  <Text>{name}</Text>
-                </Box>
-              </a>
+            <Link href={`/products/${slug}`} passHref>
+              <Box column gap={10} as="a">
+                <Image src={getImageSrc(images[0])} {...imageSize} alt={`${name}-related-product`} />
+                <Text>{name}</Text>
+              </Box>
             </Link>
           </Box>
         ))}
